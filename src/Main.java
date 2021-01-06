@@ -1,15 +1,20 @@
 import javax.swing.JFrame;
-import java.awt.Dimension;
+import java.awt.*;
+
 
 public class Main {
+
     public static void main(String[] args){
-        JFrame frame = new JFrame();
-        frame.setTitle("Testing Project");
+        JFrame frame = new JFrame("Testing Project");
         frame.setVisible(true);
+        frame.setContentPane(new GamePanel());
         frame.setResizable(false);
         frame.setSize(new Dimension(600, 800));
         frame.setDefaultCloseOperation(3);
-        Gameplay gameplay = new Gameplay();
-        frame.add(gameplay);
+        frame.pack();
+
+
     }
+
 }
+
